@@ -1,7 +1,4 @@
 class Student
-
-  # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]
   attr_accessor :name, :grade
   attr_reader :id
 
@@ -18,7 +15,7 @@ class Student
         grade TEXT
       )
       SQL
-    DB[:conn].execute(sql) 
+    DB[:conn].execute(sql)
   end
 
   def self.drop_table
